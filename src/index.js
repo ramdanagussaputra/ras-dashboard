@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import { navigationSliceReducers } from './store/navigation-slice';
+import { themeSliceReducers } from './store/theme-slice';
+import { registerLicense } from '@syncfusion/ej2-base';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import './index.css';
+
+// Registering Syncfusion license key
+registerLicense(
+    'ORg4AjUWIQA/Gnt2VVhjQlFaclhJXGFWfVJpTGpQdk5xdV9DaVZUTWY/P1ZhSXxRd0VhW31dcH1VTmFYVEM='
+);
+
+// Redux Store
+const store = configureStore({
+    reducer: {
+        navigation: navigationSliceReducers,
+        theme: themeSliceReducers,
+    },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Provider store={store}>
+        <App />
+    </Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
