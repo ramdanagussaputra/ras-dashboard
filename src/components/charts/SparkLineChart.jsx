@@ -15,7 +15,7 @@ function SparkLineChart({ width, heigth, data, color, type }) {
             fill={color}
             xName="x"
             yName="yval"
-            tooltipSettings={{ visible: true, format: '${x}: data ${yval}' }}
+            tooltipSettings={{ visible: true }}
             markerSettings={{ visible: ['All'], fill: color }}
         >
             <Inject services={[SparklineTooltip]} />
