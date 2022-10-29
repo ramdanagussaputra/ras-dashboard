@@ -34,15 +34,15 @@ function Sidebar() {
                         onClick={() => menuHandler}
                     >
                         <FaRavelry />
-                        <span>RAS DASHBOARD</span>
+                        <span>RASBOARD</span>
                     </Link>
 
                     <TooltipComponent content="Menu" position="BottomCenter">
                         <button
                             className="block pt-1 text-2xl md:hidden"
-                            onClick={() => dispath(navigationState.toggleMenu())}
+                            onClick={() => dispath(navigationSliceActions.toggleMenu())}
                         >
-                            <MdOutlineCancel />
+                            <MdOutlineCancel className="dark:text-gray-300" />
                         </button>
                     </TooltipComponent>
                 </div>
