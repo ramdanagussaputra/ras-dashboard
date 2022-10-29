@@ -19,7 +19,7 @@ function ThemeSetting() {
         // Overlay
         <div className="fixed top-0 bottom-0 right-0 left-0 z-50 bg-half-transparent">
             {/* Theme panel */}
-            <div className="fixed right-0 h-screen w-400 bg-white p-8 dark:bg-secondary-dark-bg dark:text-gray-100">
+            <div className="fixed right-0 ml-4 h-screen w-[360px] bg-white p-8 dark:bg-secondary-dark-bg dark:text-gray-100">
                 <div className="mb-4 flex items-center justify-between border-b border-gray-300 pb-8">
                     <h2 className="text-lg font-semibold">Settings</h2>
 

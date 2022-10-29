@@ -33,8 +33,8 @@ function App() {
                     themeState.currentMode === 'dark' ? 'dark' : ''
                 }`}
             >
-                {/* Setting button */}
-                <div className="fixed right-4 bottom-4">
+                {/* Theme Setting button */}
+                <div className="fixed right-4 bottom-4 z-50">
                     <TooltipComponent content={'Settings'} position={'TopCenter'}>
                         <button
                             type="button"
