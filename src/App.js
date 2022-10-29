@@ -8,19 +8,15 @@ import {
     Area,
     Bar,
     Calendar,
-    ColorMapping,
     ColorPicker,
     Customer,
     Ecommerce,
     Editor,
     Employee,
-    Financial,
     Kanban,
     Line,
     Orders,
     Pie,
-    Pyramid,
-    Stacked,
 } from './pages';
 import './App.css';
 
@@ -96,10 +92,6 @@ function App() {
                         <Route path="/area" element={<Area />} />
                         <Route path="/bar" element={<Bar />} />
                         <Route path="/pie" element={<Pie />} />
-                        <Route path="/Financial" element={<Financial />} />
-                        <Route path="/color-mapping" element={<ColorMapping />} />
-                        <Route path="/pyramid" element={<Pyramid />} />
-                        <Route path="/stacked" element={<Stacked />} />
                     </Routes>
                 </div>
             </div>

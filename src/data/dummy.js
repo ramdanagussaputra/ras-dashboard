@@ -17,7 +17,6 @@ import {
 } from 'react-icons/fi';
 import {
     BsKanban,
-    BsBarChart,
     BsBoxSeam,
     BsCurrencyDollar,
     BsShield,
@@ -25,11 +24,10 @@ import {
 } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine, RiStockLine } from 'react-icons/ri';
+import { RiContactsLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -537,22 +535,6 @@ export const links = [
             {
                 name: 'pie',
                 icon: <FiPieChart />,
-            },
-            {
-                name: 'financial',
-                icon: <RiStockLine />,
-            },
-            {
-                name: 'color-mapping',
-                icon: <BsBarChart />,
-            },
-            {
-                name: 'pyramid',
-                icon: <GiLouvrePyramid />,
-            },
-            {
-                name: 'stacked',
-                icon: <AiOutlineBarChart />,
             },
         ],
     },

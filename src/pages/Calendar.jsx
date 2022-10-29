@@ -1,8 +1,6 @@
 // Component
 import {
     ScheduleComponent,
-    ViewsDirective,
-    ViewDirective,
     Week,
     Day,
     WorkWeek,

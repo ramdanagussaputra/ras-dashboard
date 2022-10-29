@@ -1,12 +1,10 @@
 import { useSelector } from 'react-redux';
-// import {stateSliceActions} from '../store/state-slice'
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { Stacked, Pie, Button, SparkLine } from '../components';
+import { Stacked, Button, SparkLine } from '../components';
 import {
     earningData,
     SparklineAreaData,
-    ecomPieChartData,
     stackedCustomSeries,
     stackedPrimaryXAxis,
     stackedPrimaryYAxis,
@@ -20,8 +18,10 @@ function Ecommerce() {
                 <div className="h-44 w-full rounded-lg bg-hero-pattern bg-cover bg-center bg-no-repeat p-4 shadow-xl lg:w-80">
                     <div className="flex items-center justify-between">
                         <div>
-                            <p className="text-base font-bold text-gray-500">Earnings</p>
-                            <p className="mt-1 text-2xl">$63,448.78</p>
+                            <p className="text-base font-bold text-gray-500 dark:text-gray-400">
+                                Earnings
+                            </p>
+                            <p className="mt-1 text-2xl dark:text-gray-100">$63,448.78</p>
                         </div>
 
                         <Button

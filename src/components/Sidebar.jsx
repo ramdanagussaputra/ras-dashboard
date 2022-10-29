@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { navigationSliceActions } from '../store/navigation-slice';
 import { NavLink, Link } from 'react-router-dom';
-import { SiShopware } from 'react-icons/si';
+import { FaRavelry } from 'react-icons/fa';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { links } from '../data/dummy';
@@ -33,8 +33,8 @@ function Sidebar() {
                         className="flex items-center gap-3 dark:text-white"
                         onClick={() => menuHandler}
                     >
-                        <SiShopware />
-                        <span>Shoppy</span>
+                        <FaRavelry />
+                        <span>RAS DASHBOARD</span>
                     </Link>
 
                     <TooltipComponent content="Menu" position="BottomCenter">

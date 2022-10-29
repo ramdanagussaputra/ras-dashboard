@@ -3,11 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { navigationSliceActions } from '../store/navigation-slice';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { FiShoppingCart } from 'react-icons/fi';
-import { BsChatLeft } from 'react-icons/bs';
-import { RiNotification3Line } from 'react-icons/ri';
-import { MdKeyboardArrowDown } from 'react-icons/md';
-import { Cart, Chat, UserProfile, Notification } from '.';
 import avatarImg from '../data/my-avatar.jpg';
 
 const NavBtn = ({ title, icon, customFunc, color, dotColor }) => {
@@ -62,7 +57,7 @@ function Navbar() {
     }, [navigationState.screen, dispath]);
 
     return (
-        <div className="flex items-center justify-between py-2 px-4">
+        <div className="flex items-center justify-between py-3 px-12">
             <div className="flex">
                 <NavBtn
                     title="Menu"
@@ -73,28 +68,6 @@ function Navbar() {
             </div>
 
             <div className="flex items-center justify-between gap-1 ">
-                <NavBtn
-                    title="Cart"
-                    icon={<FiShoppingCart />}
-                    color={themeState.currentColor}
-                    customFunc={() => dispath(navigationSliceActions.toggleCart())}
-                />
-                <NavBtn
-                    title="Chat"
-                    icon={<BsChatLeft />}
-                    color={themeState.currentColor}
-                    dotColor={themeState.currentColor}
-                    customFunc={() => dispath(navigationSliceActions.toggleChat())}
-                />
-                <NavBtn
-                    title="Notification"
-                    icon={<RiNotification3Line />}
-                    color={themeState.currentColor}
-                    dotColor={themeState.currentColor}
-                    customFunc={() =>
-                        dispath(navigationSliceActions.toggleNotification())
-                    }
-                />
                 <TooltipComponent content="User Profile" position={'BottomCenter'}>
                     <button
                         className="flex flex-wrap items-center justify-center gap-2 text-base text-gray-500 sm:flex-nowrap"
@@ -111,15 +84,8 @@ function Navbar() {
                         <p>
                             Hi, <span className="font-bold">Ramdan</span>
                         </p>
-
-                        <MdKeyboardArrowDown />
                     </button>
                 </TooltipComponent>
-
-                {navigationState.chat && <Chat />}
-                {navigationState.userProfile && <UserProfile />}
-                {navigationState.cart && <Cart />}
-                {navigationState.notification && <Notification />}
             </div>
         </div>
     );
